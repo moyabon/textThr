@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Menu?>
+
+<FlowPane fx:id="window" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onClicked" onScroll="#onScroll" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ctrl.Controller">
+   <children>
+      <FlowPane fx:id="textWindow" onMouseClicked="#onClicked" onScroll="#onScroll" orientation="VERTICAL" prefHeight="200.0" prefWidth="560.0">
+         <children>
+            <MenuBar prefHeight="25.0" prefWidth="180.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Title">
+                    <items>
+                    <MenuItem fx:id="menuStartMenu" mnemonicParsing="false" onAction="#onMenuStartMenu" text="startMenu" />
+                  </items>
+
+                </Menu>
+                <Menu mnemonicParsing="false" text="Save">
+
+                    <MenuItem fx:id="menuSave" onAction="#onMenuSave" mnemonicParsing="false" text="Save" />
+
+                </Menu>
+                <Menu mnemonicParsing="false" text="Load">
+
+                    <MenuItem fx:id="menuLoad" onAction="#onMenuLoad" mnemonicParsing="false" text="Load" />
+
+                </Menu>
+                <Menu mnemonicParsing="false" text="Quit">
+                  <items>
+                    <MenuItem fx:id="menuQuit" mnemonicParsing="false" onAction="#onMenuQuit" text="Quit" />
+                  </items>
+                </Menu>
+              </menus>
+               <FlowPane.margin>
+                  <Insets />
+               </FlowPane.margin>
+            </MenuBar>
+            <TextArea fx:id="text" editable="false"  onMouseClicked="#onTextClicked" onScroll="#onTextScroll" prefHeight="149.0" prefWidth="560.0" text="" wrapText="true">
+               <FlowPane.margin>
+                  <Insets bottom="20.0" />
+               </FlowPane.margin>
+            </TextArea>
+         </children>
+         <FlowPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="200.0" />
+         </FlowPane.margin>
+      </FlowPane>
+   </children>
+</FlowPane>

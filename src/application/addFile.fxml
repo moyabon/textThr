@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ctrl.AddFileController">
+   <children>
+      <MenuBar>
+         <menus>
+            <Menu mnemonicParsing="false" text="Menu">
+               <items>
+                  <MenuItem fx:id="toMain" mnemonicParsing="false" onAction="#onToMain" text="startMenu" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" onAction="#onQuitMenu" text="Quit">
+               <items>
+                  <MenuItem fx:id="quitMenu" mnemonicParsing="false" onAction="#onQuitMenu" text="Quit" />
+               </items></Menu>
+         </menus>
+      </MenuBar>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ファイル(.pdf,.txt)を選択してください">
+         <font>
+            <Font name="Meiryo" size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </Text>
+      <HBox prefHeight="25.0" prefWidth="200.0" />
+      <HBox prefHeight="25.0" prefWidth="200.0">
+         <children>
+            <TextArea fx:id="txtFileText" editable="false" prefHeight="25.0" prefWidth="250.0" wrapText="true">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" top="5.0" />
+               </HBox.margin>
+            </TextArea>
+            <Button fx:id="textButton" mnemonicParsing="false" onAction="#onTextButton" text=".txt">
+               <HBox.margin>
+                  <Insets bottom="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Button fx:id="createButton" mnemonicParsing="false" onAction="#onCreateButton" text="作成">
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>
